@@ -1,0 +1,531 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* ### Primary */
+
+  --Soft-red: hsl(7, 99%, 70%);
+  --Yellow: hsla(51, 100%, 49%, 0.52);
+
+  /* (graphic design text) */
+  --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+
+  /* (photography text) */
+  --Dark-blue: hsl(198, 62%, 26%);
+
+  /* footer */
+  --Dark-moderate-cyan: hsl(168, 34%, 67%);
+
+  /* ### Neutral */
+
+  --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --Dark-grayish-blue: hsl(232, 10%, 55%);
+  --Grayish-blue: hsl(210, 4%, 67%);
+  --White: hsl(0, 0%, 100%);
+
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+
+/* HEADER section  */
+
+header {
+  width: 100%;
+  height: 90vmin;
+  background: url(images/desktop/image-header.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+}
+
+/* NAV BAR */
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul li {
+  margin: 2rem;
+  display: inline;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Barlow";
+}
+
+.navbar ul li:nth-child(4) a {
+  font-family: "Fraunces", sans-serif;
+  color: black;
+  background-color: var(--White);
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+
+.navbar ul li:hover a {
+  color: black;
+}
+
+.navbar ul li:nth-child(4) a:hover {
+  transition: 0.5s;
+  color: var(--White);
+  background-color: rgba(171, 227, 253, 0.719);
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+/* header content */
+header h1 {
+  font-size: 3rem;
+  margin-top: 80px;
+  font-family: "Fraunces", sans-serif;
+  text-align: center;
+  color: var(--White);
+  word-spacing: 20px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.arrow {
+  margin-top: 8rem;
+  width: 100%;
+  padding-left: 49%;
+}
+
+/* GALLERY main */
+
+/* Common property that each block will have */
+
+main {
+  width: 100%;
+}
+
+main > div {
+  display: flex;
+}
+
+.cover,
+.content,
+.graphic-design,
+.Photography {
+  width: 50%;
+}
+
+/* EGG */
+
+.egg {
+  flex-direction: row-reverse;
+}
+
+.egg .cover {
+  background: url(images/desktop/image-transform.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  padding: 10%;
+}
+
+.content h1 {
+  font-family: "Fraunces", sans-serif;
+  margin-bottom: 2.5rem;
+  color: var(--Very-dark-desaturated-blue);
+}
+
+.content p {
+  line-height: 1.5;
+  font-family: "Barlow", sans-serif;
+  color: var(--Very-dark-grayish-blue);
+  margin-bottom: 2.5rem;
+}
+
+.content a {
+  padding: -2rem;
+  text-decoration: none;
+  color: var(--Very-dark-desaturated-blue);
+  font-family: "Fraunces", sans-serif;
+}
+
+.content a div {
+  width: 135px;
+  height: 0.5rem;
+  background-color: var(--Yellow);
+  border-radius: 10px;
+  position: relative;
+  top: -8px;
+  z-index: -1;
+}
+
+/* transform */
+
+.transform .cover {
+  background: url(images/desktop/image-stand-out.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.transform .content a div {
+  background-color: rgba(255, 192, 203, 0.63);
+}
+
+/* services */
+
+.services {
+  height: 606px;
+  text-align: center;
+}
+
+.services div {
+  padding-top: 25%;
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.services div h1 {
+  font-family: "Fraunces", sans-serif;
+  padding-bottom: 2rem;
+}
+
+.graphic-design {
+  background: url(images/desktop/image-graphic-design.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--Dark-desaturated-cyan);
+}
+
+.Photography {
+  background: url(images/desktop/image-photography.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--Dark-blue);
+}
+
+/* Testimonials */
+
+.testimonials-section {
+  width: 100%;
+  display: flex;
+  padding: 10%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-section h3 {
+  font-family: "Fraunces", sans-serif;
+  word-spacing: 3px;
+  letter-spacing: 3px;
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 5rem;
+}
+
+.testimonials-section .individuals {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.testimonials-section .individuals div {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-section .individuals div img {
+  width: 4rem;
+  border-radius: 50%;
+  margin-bottom: 5rem;
+}
+
+.testimonials-section .individuals div p {
+  text-align: center;
+  line-height: 2;
+  color: var(--Very-dark-grayish-blue);
+  margin-bottom: 5rem;
+}
+
+.testimonials-section .individuals div h4 {
+  text-align: center;
+  font-family: "Fraunces", sans-serif;
+  line-height: 2;
+}
+
+.testimonials-section .individuals div h4 span {
+  font-family: "Barlow";
+  color: var(--Grayish-blue);
+}
+
+/* Gallery */
+
+.gallery {
+  width: 100%;
+  height: 50vmin;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery div:nth-child(1) {
+  background: url(images/desktop/image-gallery-milkbottles.jpg) no-repeat;
+  background-size: cover;
+}
+.gallery div:nth-child(2) {
+  background: url(images/desktop/image-gallery-orange.jpg) no-repeat;
+  background-size: cover;
+}
+.gallery div:nth-child(3) {
+  background: url(images/desktop/image-gallery-cone.jpg) no-repeat;
+  background-size: cover;
+}
+.gallery div:nth-child(4) {
+  background: url(images/desktop/image-gallery-sugarcubes.jpg) no-repeat;
+  background-size: cover;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--Dark-moderate-cyan);
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer ul li {
+  display: inline;
+  margin: 2rem;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: hsl(168, 26%, 46%);
+}
+
+footer > img {
+  filter: invert(27%) sepia(5%) saturate(4598%) hue-rotate(116deg)
+    brightness(45%) contrast(80%);
+  margin-bottom: 2.5rem;
+}
+
+.social {
+  margin-top: 5rem;
+}
+
+.social li {
+  margin: 1rem;
+}
+
+@media (max-width: 774px) {
+  nav {
+    position: relative;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  .navbar ul {
+    position: absolute;
+    display: none;
+    background-color: var(--White);
+    top: 3rem;
+    right: 0;
+  }
+
+  .navbar ul::before {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    content: "";
+    border-left: 25px solid transparent;
+    border-bottom: 25px solid var(--White);
+  }
+
+  .navbar ul li {
+    margin: 2rem;
+    display: block;
+    text-align: center;
+  }
+
+  .navbar ul li a {
+    color: var(--Dark-grayish-blue);
+  }
+
+  .navbar ul li:nth-child(4) a:active {
+    transition: 0s !important;
+    color: black !important;
+    background-color: rgb(255, 217, 1) !important;
+  }
+
+  .navbar ul li:nth-child(4) a:hover {
+    transition: 0s;
+    color: black;
+    background-color: white;
+  }
+}
+@media (max-width: 400px) {
+  /* modification in Header section*/
+
+  header {
+    background: url(images/mobile/image-header.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 140vmin;
+  }
+  
+  header h1{
+        font-size: 1.5rem;
+  }
+
+  .navbar ul {
+    width: 100%;
+  }
+
+  .arrow {
+    margin-top: 4rem;
+    padding-left: 45%;
+  }
+
+  /* modification in main section */
+
+  .cover,
+  .content,
+  .graphic-design,
+  .Photography {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content a div {
+    margin-left: 80px;
+  }
+
+  /* Egg */
+
+  .egg,
+  .transform {
+    flex-direction: column;
+  }
+
+  .egg .cover {
+    height: 45vh;
+    background: url(images/mobile/image-transform.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .transform .cover {
+    height: 45vh;
+    background: url(images/mobile/image-stand-out.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .services {
+    flex-direction: column;
+    height: 150vh;
+  }
+
+  .graphic-design {
+    height: 50%;
+    background: url(images/mobile/image-graphic-design.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .Photography {
+    height: 50%;
+    background: url(images/mobile/image-photography.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .services div {
+    padding-top: 90%;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+
+  /* modification in testimonials */
+
+  .testimonials-section h3 {
+    margin-top: 3rem;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .testimonials-section .individuals {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .testimonials-section .individuals div {
+    margin-bottom: 3rem;
+    width: 95vw;
+  }
+
+  .testimonials-section .individuals div img {
+    margin-bottom: 2rem;
+  }
+
+  .testimonials-section .individuals div p {
+    margin-bottom: 1rem;
+  }
+
+  /* Gallery */
+
+  .gallery {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vmin;
+  }
+
+  .gallery div:nth-child(1) {
+    background: url(images/mobile/image-gallery-milkbottles.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .gallery div:nth-child(2) {
+    background: url(images/mobile/image-gallery-orange.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .gallery div:nth-child(3) {
+    background: url(images/mobile/image-gallery-cone.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .gallery div:nth-child(4) {
+    background: url(images/mobile/image-gallery-sugar-cubes.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  /* footer */
+
+  footer{
+    padding-bottom: 5rem;
+  }
+
+  footer ul li {
+    display: inline;
+    margin: 1rem;
+  }
+
+}
